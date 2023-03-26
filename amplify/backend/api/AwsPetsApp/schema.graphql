@@ -1,0 +1,58 @@
+type Bird @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+  image: AWSURL!
+  age: Int
+  Owner: Owner @hasOne
+}
+
+type Dog @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+  image: AWSURL!
+  age: Int
+  Owner: Owner @hasOne
+}
+
+type Cat @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+  image: AWSURL!
+  age: Int
+  Owner: Owner @hasOne
+}
+
+type Owner @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  fullName: String!
+  email: AWSEmail!
+  ownerImage: AWSURL
+  address: Address
+}
+
+type Address {
+  city: String
+  street: String
+  zip: String
+}
+
+enum PetType {
+  RABBIT
+  TURTLE
+  FISH
+  RODENT
+}
+
+type Pet @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  name: String!
+  description: String
+  petImage: AWSURL!
+  petType: PetType!
+  petAge: Int
+  Owner: Owner @hasOne
+}
+ 

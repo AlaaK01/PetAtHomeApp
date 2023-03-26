@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--mainColor);  
+}
+
+.hero-image{
+  height: 80%;
+  width: 100%;
+  background-image: url("../../public/images/pet_2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top:3%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+.logo {
+  font-size: 32px;
+  color: var(--textColor);
+  font-weight: bold;
+}
+.logo-text {
+  color: var(--secondaryColor);
+}
+nav ul .nav-link {
+  list-style-type: none;
+  display: inline-block;
+  padding-left: 50px;
+}
+.link-text {
+  color: var(--textColor);
+  text-decoration: none;
+  font-weight: bold;
+}
+.link-text:hover {
+  color: var(--secondaryColor);
+  transition: 0.1s;
+}
+.subscribe {
+  border: none;
+  background-color: var(--secondaryColor);
+  padding: 12px 30px;
+  border-radius: 30px;
+  color: var(--textColor);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.subscribe:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
